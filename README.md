@@ -1,20 +1,21 @@
 # project-templates
 
-Opinionated, production-ready starter templates for my go-to stacks. One repo, one branch per stack, pick the branch you need and hit **Use this template**.
+Opinionated, production-ready starter templates for my go-to stacks. One repo, one branch per stack — pick the branch you need and hit **Use this template**.
 
 No boilerplate fatigue, no re-configuring the same tooling for the tenth time.
 
 ## How to use
 
 1. Click **Use this template** above.
-2. In the branch dropdown, pick the stack you want (see table below) instead of `main`.
-3. Name your new repo and generate it, you'll get a clean copy of just that stack, no other templates included.
+2. On the "Create a new repository" screen, check **Include all branches** — without this, only `main` (the index page, not an actual stack) gets copied.
+3. Name your new repo and generate it.
+4. In your new repo, check out the branch for the stack you want (see table below) — that becomes your working branch.
 
 Prefer the CLI?
 
 ```bash
-gh repo create my-app --template florixak/project-templates --clone
-# then check out the branch for the stack you want before your first commit
+gh repo create my-app --template florixak/project-templates --include-all-branches --clone
+cd my-app && git checkout nextjs   # or nestjs, spring-boot, ...
 ```
 
 ## Available templates
@@ -22,9 +23,8 @@ gh repo create my-app --template florixak/project-templates --clone
 | Branch | Stack | Status | Notes |
 |---|---|---|---|
 | [`nextjs`](../../tree/nextjs) | Next.js 16 + React 19 + TypeScript | ✅ Stable | Tailwind v4, shadcn/ui, Biome, Vitest, Husky. See branch README for full details. |
-| [`TanStack Start`](../../tree/tanstack-start) | TanStack Start | 🚧 In progress | |
 | [`nestjs`](../../tree/nestjs) | NestJS + TypeScript | 🚧 In progress | |
-| [`spring-boot`](../../tree/spring-boot) | Spring Boot + Java | 🚧 In progress | |
+| [`spring-boot`](../../tree/spring-boot) | Spring Boot + Java/Kotlin | 🚧 In progress | |
 
 *(Update this table whenever a branch is added, renamed, or its status changes.)*
 
@@ -49,4 +49,4 @@ Every template in this repo follows the same rules, regardless of stack:
 
 ## License
 
-MIT — use any of these templates for anything, no attribution required.
+MIT — use any of these templates for anything, including commercially, as long as the copyright and permission notice in [`LICENSE`](LICENSE) is retained in copies or substantial portions of the code.
