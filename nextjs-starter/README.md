@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# nextjs-starter
+
+Personal Next.js project template. Production-ready foundation for every new project.
+
+## Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript 5 (strict + erasableSyntaxOnly) |
+| Styling | Tailwind CSS v4 + shadcn/ui (base-lyra) |
+| Linting | Biome v2 |
+| Testing | Vitest |
+| Git hooks | Husky + lint-staged + commitlint |
+| Package manager | pnpm |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+# Install dependencies
+pnpm install
+
+# Copy environment variables
+cp .env.example .env.local
+
+# Start development server (Turbopack)
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+See [`.env.example`](.env.example) for all available variables.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The only required variable is:
 
-## Learn More
+```
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Script | Description |
+|---|---|
+| `pnpm dev` | Start dev server (Turbopack) |
+| `pnpm build` | Production build |
+| `pnpm start` | Start production server |
+| `pnpm check` | Run Biome linter + formatter check |
+| `pnpm check:write` | Auto-fix with Biome |
+| `pnpm typecheck` | TypeScript type check |
+| `pnpm test` | Run tests in watch mode |
+| `pnpm test:run` | Run tests once (CI) |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project Structure
 
-## Deploy on Vercel
+```
+app/                  # Next.js App Router
+  (marketing)/        # Public marketing pages
+  api/                # Route handlers
+  error.tsx           # Runtime error boundary ("use client")
+  global-error.tsx    # Root layout error fallback ("use client")
+  not-found.tsx       # 404 page
+  loading.tsx         # Suspense loading UI
+  robots.ts           # robots.txt
+  sitemap.ts          # sitemap.xml
+  manifest.ts         # Web app manifest
+  opengraph-image.tsx # OG image generation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+actions/              # Server Actions (domain-split, "use server")
+components/
+  layout/             # Header, Footer, ThemeProvider, ThemeToggle
+  skeletons/          # Loading skeleton components
+  ui/                 # shadcn/ui components
+hooks/                # Custom hooks (use-kebab-case.ts)
+lib/
+  config.ts           # siteConfig
+  env.ts              # Type-safe environment variables
+  metadata.ts         # createMetadata() factory
+  structured-data.ts  # JSON-LD schema helpers
+  utils.ts            # cn(), absoluteUrl()
+types/
+  index.ts            # Shared type definitions
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Conventions
+
+- **No enums** — use `as const` objects with derived union types
+- **Server Components by default** — add `"use client"` only when needed
+- **Type-safe env vars** — always access via `@/lib/env`, never raw `process.env`
+- **Commits** — follow [Conventional Commits](https://www.conventionalcommits.org)
+
+## Adding Optional Integrations
+
+Documented in `.env.example`. Install per project:
+
+- **Database**: `drizzle-orm` + `drizzle-kit` + `@neondatabase/serverless`
+- **Auth**: `better-auth` (Drizzle adapter, email + Google OAuth)
+- **Payments**: `stripe`
+- **Email**: `resend`
+- **State**: `@tanstack/react-query` + `zustand`
+- **Forms**: `@tanstack/react-form`
