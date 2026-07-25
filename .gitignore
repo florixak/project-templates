@@ -1,0 +1,23 @@
+# compiled output
+/dist
+/node_modules
+
+# Logs
+logs
+*.log
+
+# Tests
+/coverage
+
+# dotenv
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+
+# IDE
+.idea
+.vscode/*
+!.vscode/extensions.json
