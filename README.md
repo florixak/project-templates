@@ -15,7 +15,7 @@ Prefer the CLI?
 
 ```bash
 gh repo create my-app --template florixak/project-templates --include-all-branches --clone
-cd my-app && git checkout nextjs   # or nestjs, spring-boot, ...
+cd my-app && git checkout nextjs   # or nestjs, tanstack-start, spring-boot, ...
 ```
 
 ## Available templates
@@ -24,6 +24,7 @@ cd my-app && git checkout nextjs   # or nestjs, spring-boot, ...
 |---|---|---|---|
 | [`nextjs`](../../tree/nextjs) | Next.js 16 + React 19 + TypeScript | ✅ Stable | Tailwind v4, shadcn/ui, Biome, Vitest, Husky. See branch README for full details. |
 | [`nestjs`](../../tree/nestjs) | NestJS + TypeScript | 🚧 In progress | |
+| [`tanstack-start`](../../tree/tanstack-start) | TanStack Start + React 19 + TypeScript | 🚧 In progress | File Router, Query SSR, Zod, Nitro, ESLint/Prettier, Vitest, Docker. |
 | [`spring-boot`](../../tree/spring-boot) | Spring Boot + Java/Kotlin | 🚧 In progress | |
 
 *(Update this table whenever a branch is added, renamed, or its status changes.)*
