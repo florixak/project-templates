@@ -13,6 +13,7 @@ Personal Next.js project template. Production-ready foundation for every new pro
 | Testing | Vitest |
 | Git hooks | Husky + lint-staged + commitlint |
 | Package manager | pnpm |
+| Data fetching | TanStack Query v5 |
 
 ## Getting Started
 
@@ -68,10 +69,14 @@ app/                  # Next.js App Router
 actions/              # Server Actions (domain-split, "use server")
 components/
   layout/             # Header, Footer, ThemeProvider, ThemeToggle
+  providers/          # QueryProvider and other client providers
+  query/              # AsyncQueryState, QueryRefetchIndicator
   skeletons/          # Loading skeleton components
   ui/                 # shadcn/ui components
 hooks/                # Custom hooks (use-kebab-case.ts)
 lib/
+  api/
+    query-client.ts   # getQueryClient(), SSR-safe singleton
   config.ts           # siteConfig
   env.ts              # Type-safe environment variables
   metadata.ts         # createMetadata() factory
@@ -96,5 +101,5 @@ Documented in `.env.example`. Install per project:
 - **Auth**: `better-auth` (Drizzle adapter, email + Google OAuth)
 - **Payments**: `stripe`
 - **Email**: `resend`
-- **State**: `@tanstack/react-query` + `zustand`
+- **Client state**: `zustand`
 - **Forms**: `@tanstack/react-form`
