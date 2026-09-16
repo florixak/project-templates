@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next"
+import { routing } from "@/i18n/routing"
 import { siteConfig } from "@/lib/config"
 
 export default function manifest(): MetadataRoute.Manifest {
@@ -6,6 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: siteConfig.name,
     short_name: siteConfig.name,
     description: siteConfig.description,
+    lang: routing.defaultLocale,
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

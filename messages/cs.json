@@ -1,0 +1,28 @@
+{
+  "Metadata": {
+    "description": "Produkčně připravená aplikace v Next.js."
+  },
+  "Footer": {
+    "rights": "© {year} {name}. Všechna práva vyhrazena."
+  },
+  "ThemeToggle": {
+    "label": "Přepnout vzhled",
+    "light": "Světlý",
+    "dark": "Tmavý",
+    "system": "Systémový"
+  },
+  "LocaleSwitcher": {
+    "label": "Změnit jazyk"
+  },
+  "NotFoundPage": {
+    "title": "404 — Stránka nenalezena",
+    "description": "Stránka, kterou hledáte, neexistuje nebo byla přesunuta.",
+    "backHome": "Přejít na úvodní stránku"
+  },
+  "Error": {
+    "title": "Něco se pokazilo",
+    "description": "Došlo k neočekávané chybě.",
+    "digest": "ID chyby: {digest}",
+    "retry": "Zkusit znovu"
+  }
+}
