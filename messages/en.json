@@ -1,0 +1,28 @@
+{
+  "Metadata": {
+    "description": "A production-ready Next.js application."
+  },
+  "Footer": {
+    "rights": "© {year} {name}. All rights reserved."
+  },
+  "ThemeToggle": {
+    "label": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "LocaleSwitcher": {
+    "label": "Change language"
+  },
+  "NotFoundPage": {
+    "title": "404 — Page not found",
+    "description": "The page you’re looking for doesn’t exist or has been moved.",
+    "backHome": "Go home"
+  },
+  "Error": {
+    "title": "Something went wrong",
+    "description": "An unexpected error occurred.",
+    "digest": "Error ID: {digest}",
+    "retry": "Try again"
+  }
+}

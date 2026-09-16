@@ -1,6 +1,7 @@
-import Link from "next/link";
-import { ThemeToggle } from "@/components/layout/theme-toggle";
-import { siteConfig } from "@/lib/config";
+import { LocaleSwitcher } from "@/components/layout/locale-switcher"
+import { ThemeToggle } from "@/components/layout/theme-toggle"
+import { Link } from "@/i18n/navigation"
+import { siteConfig } from "@/lib/config"
 
 export default function Header() {
   return (
@@ -9,8 +10,11 @@ export default function Header() {
         <Link href="/" className="text-foreground text-sm font-semibold">
           {siteConfig.name}
         </Link>
-        <ThemeToggle />
+        <div className="flex items-center gap-2">
+          <LocaleSwitcher />
+          <ThemeToggle />
+        </div>
       </div>
     </header>
-  );
+  )
 }
