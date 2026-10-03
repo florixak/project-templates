@@ -23,7 +23,7 @@ cd my-app && git checkout nextjs   # or nestjs, tanstack-start, spring-boot, ...
 | Branch | Stack | Status | Notes |
 |---|---|---|---|
 | [`nextjs`](../../tree/nextjs) | Next.js 16 + React 19 + TypeScript | ✅ Stable | Tailwind v4, shadcn/ui, Biome, Vitest, Husky. See branch README for full details. |
-| [`nextjs`](../../tree/nextjs-internationalization) | Next.js 16 + React 19 + TypeScript + next-intl | ✅ Stable | Next.js branch + next-intl. See branch README for full details. |
+| [`nextjs-internationalization`](../../tree/nextjs-internationalization) | Next.js 16 + React 19 + TypeScript + next-intl | ✅ Stable | Next.js branch + next-intl. See branch README for full details. |
 | [`nestjs`](../../tree/nestjs) | NestJS + TypeScript | 🚧 Testing | |
 | [`tanstack-start`](../../tree/tanstack-start) | TanStack Start + React 19 + TypeScript | 🚧 Testing | File Router, Query SSR, Zod, Nitro, ESLint/Prettier, Vitest, Docker. |
 | [`spring-boot`](../../tree/spring-boot) | Spring Boot + Java/Kotlin | 🚧 Soon | |
