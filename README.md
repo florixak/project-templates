@@ -1,4 +1,4 @@
-# project-templates
+# Project Templates
 
 Opinionated, production-ready starter templates for my go-to stacks. One repo, one branch per stack — pick the branch you need and hit **Use this template**.
 
@@ -23,9 +23,10 @@ cd my-app && git checkout nextjs   # or nestjs, tanstack-start, spring-boot, ...
 | Branch | Stack | Status | Notes |
 |---|---|---|---|
 | [`nextjs`](../../tree/nextjs) | Next.js 16 + React 19 + TypeScript | ✅ Stable | Tailwind v4, shadcn/ui, Biome, Vitest, Husky. See branch README for full details. |
-| [`nestjs`](../../tree/nestjs) | NestJS + TypeScript | 🚧 In progress | |
-| [`tanstack-start`](../../tree/tanstack-start) | TanStack Start + React 19 + TypeScript | 🚧 In progress | File Router, Query SSR, Zod, Nitro, ESLint/Prettier, Vitest, Docker. |
-| [`spring-boot`](../../tree/spring-boot) | Spring Boot + Java/Kotlin | 🚧 In progress | |
+| [`nextjs`](../../tree/nextjs-internationalization) | Next.js 16 + React 19 + TypeScript + next-intl | ✅ Stable | Next.js branch + next-intl. See branch README for full details. |
+| [`nestjs`](../../tree/nestjs) | NestJS + TypeScript | 🚧 Testing | |
+| [`tanstack-start`](../../tree/tanstack-start) | TanStack Start + React 19 + TypeScript | 🚧 Testing | File Router, Query SSR, Zod, Nitro, ESLint/Prettier, Vitest, Docker. |
+| [`spring-boot`](../../tree/spring-boot) | Spring Boot + Java/Kotlin | 🚧 Soon | |
 
 *(Update this table whenever a branch is added, renamed, or its status changes.)*
 
